@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48B9806C-69E7-4DB5-B66E-D882F021A53B}|Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj|c:\\users\\sisma\\documents\\proyectos de .net\\aplicacion.empresarial\\ecommerce.domain.core\\customersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48B9806C-69E7-4DB5-B66E-D882F021A53B}|Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj|solutionrelative:ecommerce.domain.core\\customersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B0EE81-410E-42A5-BE70-E3A6B58E6DFB}|Ecommerce.Infraestructura\\Ecommerce.Infraestructura.csproj|c:\\users\\sisma\\documents\\proyectos de .net\\aplicacion.empresarial\\ecommerce.infraestructura\\interfaces\\icustomersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47B0EE81-410E-42A5-BE70-E3A6B58E6DFB}|Ecommerce.Infraestructura\\Ecommerce.Infraestructura.csproj|solutionrelative:ecommerce.infraestructura\\interfaces\\icustomersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33EAF72B-E67F-442F-A5EC-236AE0FF156B}|Ecommerce.Dominio\\Ecommerce.Dominio.csproj|c:\\users\\sisma\\documents\\proyectos de .net\\aplicacion.empresarial\\ecommerce.dominio\\interfaces\\icustomersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33EAF72B-E67F-442F-A5EC-236AE0FF156B}|Ecommerce.Dominio\\Ecommerce.Dominio.csproj|solutionrelative:ecommerce.dominio\\interfaces\\icustomersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 27,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICustomersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
+              "ToolTip": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
+              "RelativeToolTip": "Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:37:43.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICustomersDomain.cs",
+              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
+              "ToolTip": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
+              "RelativeToolTip": "Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:30:30.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomersDomain.cs",
+              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Domain.Core\\CustomersDomain.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Domain.Core\\CustomersDomain.cs",
+              "ToolTip": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Domain.Core\\CustomersDomain.cs",
+              "RelativeToolTip": "Ecommerce.Domain.Core\\CustomersDomain.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T04:27:24.643Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

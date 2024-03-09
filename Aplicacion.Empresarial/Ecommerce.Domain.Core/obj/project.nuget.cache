@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LngQ+vOeNFDu/eNm6NAmgpt3b5oTYYyiMopL9Mp2YLbpGhQrSbbPh8OAyuZPcL0L6STWrgmNkliRpTCPeEE44w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sisma\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\Sisma\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

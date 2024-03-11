@@ -74,8 +74,6 @@ namespace Ecommerce.Services.WebApi
 
             var app = builder.Build();
 
-
-            // Configure the HTTP request pipeline.
            if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -90,6 +88,7 @@ namespace Ecommerce.Services.WebApi
        
             app.UseAuthorization();
             app.UseCors(MyPolicy);
+           // app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.MapControllers();
             app.Run();
         }

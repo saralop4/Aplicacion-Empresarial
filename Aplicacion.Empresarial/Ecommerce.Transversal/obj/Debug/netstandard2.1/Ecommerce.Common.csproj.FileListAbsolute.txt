@@ -1,0 +1,11 @@
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\bin\Debug\netstandard2.1\Ecommerce.Common.deps.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\bin\Debug\netstandard2.1\Ecommerce.Common.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\bin\Debug\netstandard2.1\Ecommerce.Common.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.csproj.AssemblyReference.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.AssemblyInfoInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.AssemblyInfo.cs
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.csproj.CoreCompileInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.sourcelink.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal\obj\Debug\netstandard2.1\Ecommerce.Common.pdb

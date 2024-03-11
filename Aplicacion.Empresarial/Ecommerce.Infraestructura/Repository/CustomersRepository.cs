@@ -42,7 +42,7 @@ namespace Ecommerce.Infraestructura.Repository
             using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
             {
 
-                var query = "CustomersById"; //nombre del procedimiento almacenado
+                var query = "CustomersGetByID"; //nombre del procedimiento almacenado
                 var parameters = new DynamicParameters(); //para el uso de dapper se recomienda el uso de parametros dinamicos
                                                           //parameters es una lista de parametros
                 parameters.Add("CustomerID", customerId);
@@ -60,12 +60,7 @@ namespace Ecommerce.Infraestructura.Repository
             {
 
                 var query = "CustomersList"; //nombre del procedimiento almacenado
-                var parameters = new DynamicParameters(); //para el uso de dapper se recomienda el uso de parametros dinamicos
-                                                          //parameters es una lista de parametros
-                parameters.Add("CustomerID");
-
-
-                var customers = connection.Query<Customers>(query, param: parameters, commandType: CommandType.StoredProcedure);
+                var customers = connection.Query<Customers>(query, param: null, commandType: CommandType.StoredProcedure);
                 //el metodo execute permite invocar un procedimiento almacenado y enviarle los parametros
                 return customers;
             }
@@ -162,12 +157,12 @@ namespace Ecommerce.Infraestructura.Repository
             }
         }
 
-        public async Task<Customers> GetSync(string customerId)
+        public async Task<Customers> GetAsync(string customerId)
         {
             using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
             {
 
-                var query = "CustomersById"; //nombre del procedimiento almacenado
+                var query = "CustomersGetByID"; //nombre del procedimiento almacenado
                 var parameters = new DynamicParameters(); //para el uso de dapper se recomienda el uso de parametros dinamicos
                                                           //parameters es una lista de parametros
                 parameters.Add("CustomerID", customerId);

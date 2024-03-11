@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj": {}
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj": {
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj",
         "projectName": "Ecommerce.Dominio",
-        "projectPath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj",
+        "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj",
         "packagesPath": "C:\\Users\\Sisma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -50,9 +50,21 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [

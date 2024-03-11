@@ -1,0 +1,11 @@
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.deps.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.csproj.AssemblyReference.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.AssemblyInfoInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.AssemblyInfo.cs
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.sourcelink.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.DTO\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.pdb

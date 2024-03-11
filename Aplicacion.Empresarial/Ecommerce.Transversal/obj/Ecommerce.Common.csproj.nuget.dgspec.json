@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj": {}
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj": {
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj",
         "projectName": "Ecommerce.Common",
-        "projectPath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj",
+        "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal\\Ecommerce.Common.csproj",
         "packagesPath": "C:\\Users\\Sisma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Transversal\\obj\\",
+        "outputPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -53,6 +53,14 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [

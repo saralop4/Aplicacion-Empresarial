@@ -1,0 +1,252 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal.Mapper\\Ecommerce.Transversal.Mapper.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Aplicacion.DTO\\Ecommerce.Aplicacion.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Aplicacion.DTO\\Ecommerce.Aplicacion.DTO.csproj",
+        "projectName": "Ecommerce.Aplicacion.DTO",
+        "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Aplicacion.DTO\\Ecommerce.Aplicacion.DTO.csproj",
+        "packagesPath": "C:\\Users\\Sisma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Aplicacion.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sisma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\Sisma\\Documents\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200-preview.23624.5\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj",
+        "projectName": "Ecommerce.Dominio",
+        "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Sisma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sisma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\Sisma\\Documents\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200-preview.23624.5\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal.Mapper\\Ecommerce.Transversal.Mapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal.Mapper\\Ecommerce.Transversal.Mapper.csproj",
+        "projectName": "Ecommerce.Transversal.Mapper",
+        "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal.Mapper\\Ecommerce.Transversal.Mapper.csproj",
+        "packagesPath": "C:\\Users\\Sisma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Transversal.Mapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sisma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\Sisma\\Documents\\Nugets": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Aplicacion.DTO\\Ecommerce.Aplicacion.DTO.csproj": {
+                "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Aplicacion.DTO\\Ecommerce.Aplicacion.DTO.csproj"
+              },
+              "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Ecommerce.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200-preview.23624.5\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

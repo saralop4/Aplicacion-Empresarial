@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\",
+  "WorkspaceRootPath": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48B9806C-69E7-4DB5-B66E-D882F021A53B}|Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj|c:\\users\\sisma\\documents\\proyectos de .net\\aplicacion.empresarial\\ecommerce.domain.core\\customersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48B9806C-69E7-4DB5-B66E-D882F021A53B}|Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj|solutionrelative:ecommerce.domain.core\\customersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDFADBCF-5C35-4DC9-BA75-5CA345E8CE6E}|Ecommerce.Services.WebApi\\Ecommerce.Services.WebApi.csproj|c:\\users\\sisma\\documents\\aplicacion-empresarial\\aplicacion.empresarial\\ecommerce.services.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDFADBCF-5C35-4DC9-BA75-5CA345E8CE6E}|Ecommerce.Services.WebApi\\Ecommerce.Services.WebApi.csproj|solutionrelative:ecommerce.services.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47B0EE81-410E-42A5-BE70-E3A6B58E6DFB}|Ecommerce.Infraestructura\\Ecommerce.Infraestructura.csproj|c:\\users\\sisma\\documents\\proyectos de .net\\aplicacion.empresarial\\ecommerce.infraestructura\\interfaces\\icustomersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47B0EE81-410E-42A5-BE70-E3A6B58E6DFB}|Ecommerce.Infraestructura\\Ecommerce.Infraestructura.csproj|solutionrelative:ecommerce.infraestructura\\interfaces\\icustomersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33EAF72B-E67F-442F-A5EC-236AE0FF156B}|Ecommerce.Dominio\\Ecommerce.Dominio.csproj|c:\\users\\sisma\\documents\\proyectos de .net\\aplicacion.empresarial\\ecommerce.dominio\\interfaces\\icustomersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33EAF72B-E67F-442F-A5EC-236AE0FF156B}|Ecommerce.Dominio\\Ecommerce.Dominio.csproj|solutionrelative:ecommerce.dominio\\interfaces\\icustomersdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDFADBCF-5C35-4DC9-BA75-5CA345E8CE6E}|Ecommerce.Services.WebApi\\Ecommerce.Services.WebApi.csproj|c:\\users\\sisma\\documents\\aplicacion-empresarial\\aplicacion.empresarial\\ecommerce.services.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CDFADBCF-5C35-4DC9-BA75-5CA345E8CE6E}|Ecommerce.Services.WebApi\\Ecommerce.Services.WebApi.csproj|solutionrelative:ecommerce.services.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 27,
+          "SelectedChildIndex": 26,
           "Children": [
             {
               "$type": "Bookmark",
@@ -127,38 +123,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ICustomersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
-              "RelativeDocumentMoniker": "Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
-              "ToolTip": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
-              "RelativeToolTip": "Ecommerce.Infraestructura\\Interfaces\\ICustomersRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T04:37:43.847Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICustomersDomain.cs",
-              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
-              "RelativeDocumentMoniker": "Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
-              "ToolTip": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
-              "RelativeToolTip": "Ecommerce.Dominio\\Interfaces\\ICustomersDomain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T04:30:30.355Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Services.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "Ecommerce.Services.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Services.WebApi\\appsettings.json",
+              "RelativeToolTip": "Ecommerce.Services.WebApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-11T03:54:06.573Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CustomersDomain.cs",
-              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Domain.Core\\CustomersDomain.cs",
-              "RelativeDocumentMoniker": "Ecommerce.Domain.Core\\CustomersDomain.cs",
-              "ToolTip": "C:\\Users\\Sisma\\Documents\\PROYECTOS DE .NET\\Aplicacion.Empresarial\\Ecommerce.Domain.Core\\CustomersDomain.cs",
-              "RelativeToolTip": "Ecommerce.Domain.Core\\CustomersDomain.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCQAAAABAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Services.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Ecommerce.Services.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Sisma\\Documents\\Aplicacion-Empresarial\\Aplicacion.Empresarial\\Ecommerce.Services.WebApi\\Program.cs",
+              "RelativeToolTip": "Ecommerce.Services.WebApi\\Program.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAwD8AAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T04:27:24.643Z",
+              "WhenOpened": "2024-03-11T01:32:49.281Z",
               "EditorCaption": ""
             }
           ]

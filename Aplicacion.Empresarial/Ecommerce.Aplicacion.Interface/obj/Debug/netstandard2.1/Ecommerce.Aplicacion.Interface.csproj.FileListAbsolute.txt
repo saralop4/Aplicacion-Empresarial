@@ -1,0 +1,16 @@
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.deps.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Common.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\bin\Debug\netstandard2.1\Ecommerce.Common.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.csproj.AssemblyReference.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.AssemblyInfoInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.AssemblyInfo.cs
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.sourcelink.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerc.B38081B8.Up2Date
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Aplicacion.Interface\obj\Debug\netstandard2.1\Ecommerce.Aplicacion.Interface.pdb

@@ -1,0 +1,16 @@
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.deps.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Dominio.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Aplicacion.DTO.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\bin\Debug\netstandard2.1\Ecommerce.Dominio.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.csproj.AssemblyReference.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.AssemblyInfoInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.AssemblyInfo.cs
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.sourcelink.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerc.4B034AC0.Up2Date
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Transversal.Mapper\obj\Debug\netstandard2.1\Ecommerce.Transversal.Mapper.pdb

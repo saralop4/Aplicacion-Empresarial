@@ -1,0 +1,150 @@
+[
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Customers/Delete/{customerId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "Delete",
+    "RelativePath": "api/Customers/Delete/DeleteSinc",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "GetAsync",
+    "RelativePath": "api/Customers/Get/GetAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "Get",
+    "RelativePath": "api/Customers/Get/GetSinc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Customers/GetAll/GetAllAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Customers/GetAll/GetAllSinc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "InsertAsync",
+    "RelativePath": "api/Customers/Insert/InsertAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customersDto",
+        "Type": "Ecommerce.Aplicacion.DTO.CustomersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "Insert",
+    "RelativePath": "api/Customers/Insert/InsertSinc",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customersDto",
+        "Type": "Ecommerce.Aplicacion.DTO.CustomersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Customers/Update/UpdateAsync",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customersDto",
+        "Type": "Ecommerce.Aplicacion.DTO.CustomersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Services.WebApi.Controllers.CustomersController",
+    "Method": "Update",
+    "RelativePath": "api/Customers/Update/UpdateSinc",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customersDto",
+        "Type": "Ecommerce.Aplicacion.DTO.CustomersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

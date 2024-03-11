@@ -1,0 +1,16 @@
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Infraestructura.deps.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Infraestructura.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Infraestructura.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Common.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Dominio.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Dominio.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\bin\Debug\netstandard2.1\Ecommerce.Common.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.csproj.AssemblyReference.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.AssemblyInfoInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.AssemblyInfo.cs
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.csproj.CoreCompileInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.sourcelink.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerc.65BC3713.Up2Date
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Infraestructura\obj\Debug\netstandard2.1\Ecommerce.Infraestructura.pdb

@@ -1,9 +1,11 @@
 ﻿using Ecommerce.Dominio.Entity;
 using Ecommerce.Dominio.Interfaces;
 using Ecommerce.Infraestructura.Interfaces;
+using Ecommerce.Infraestructura.Repository;
 using Ecommerce.Transversal.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,11 +20,21 @@ namespace Ecommerce.Domain.Core
             _customersRepository = customersRepository;
 
         }
+
+        //La clase CustomersDomain no necesita saber cómo se implementa el método Delete.Solo necesita saber que el método existe en la interfaz ICustomersRepository.
+
+        //Cuando se llama al método Delete de CustomersDomain, este a su vez llama al método Delete de _customersRepository, que es una instancia de ICustomersRepository. 
+        //La implementación exacta de Delete que se llama depende de la clase que se pasó al constructor de CustomersDomain cuando se creó la instancia.
+
+        //Por ejemplo, si pasaste una instancia de CustomersRepository al constructor de CustomersDomain, entonces el método Delete de CustomersRepository será el que se llame.
+        //Si tuvieras otra clase que implementara ICustomersRepository y pasaras una instancia de esa clase al constructor, entonces se llamaría al método Delete de esa clase.
+        //Esto es posible gracias a la polimorfismo, un principio fundamental de la programación orientada a objetos.El polimorfismo permite que un objeto se comporte de diferentes 
+        //maneras dependiendo de su tipo en tiempo de ejecución.En este caso, _customersRepository puede ser cualquier objeto que implemente ICustomersRepository, y el método Delete
+        //que se llama es el que corresponde a la implementación real del objeto.
         public bool Delete(string customerId)
         {
             return _customersRepository.Delete(customerId);
         }
-
         public async Task<bool> DeleteAsync(string customerId)
         {
             return await _customersRepository.DeleteAsync(customerId);
@@ -43,9 +55,9 @@ namespace Ecommerce.Domain.Core
             return _customersRepository.GetAllAsync();
         }
 
-        public async Task<Customers> GetSync(string customerId)
+        public async Task<Customers> GetAsync(string customerId)
         {
-            return await _customersRepository.GetSync(customerId);
+            return await _customersRepository.GetAsync(customerId);
         }
 
         public bool Insert(Customers customer)

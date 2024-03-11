@@ -1,0 +1,11 @@
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\bin\Debug\netstandard2.1\Ecommerce.Dominio.deps.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\bin\Debug\netstandard2.1\Ecommerce.Dominio.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\bin\Debug\netstandard2.1\Ecommerce.Dominio.pdb
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.csproj.AssemblyReference.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.AssemblyInfoInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.AssemblyInfo.cs
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.sourcelink.json
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.dll
+C:\Users\Sisma\Documents\Aplicacion-Empresarial\Aplicacion.Empresarial\Ecommerce.Dominio\obj\Debug\netstandard2.1\Ecommerce.Dominio.pdb

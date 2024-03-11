@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Ecommerce.Dominio\Ecommerce.Dominio.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura\Ecommerce.Infraestructura.csproj" />
   </ItemGroup>

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DocumentationFile>C:\Users\Sarah\Documents\Aplicacion.Empresarial\Ecommerce.Services.WebApi\Ecommerce.Services.WebApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.Aplicacion.DTO\Ecommerce.Aplicacion.DTO.csproj" />
+    <ProjectReference Include="..\Ecommerce.Aplicacion.Interface\Ecommerce.Aplicacion.Interface.csproj" />
+    <ProjectReference Include="..\Ecommerce.Aplicacion.Main\Ecommerce.Aplicacion.Main.csproj" />
+    <ProjectReference Include="..\Ecommerce.Aplicacion.Validator\Ecommerce.Aplicacion.Validator.csproj" />
+    <ProjectReference Include="..\Ecommerce.Domain.Core\Ecommerce.Domain.Core.csproj" />
+    <ProjectReference Include="..\Ecommerce.Dominio\Ecommerce.Dominio.csproj" />
+    <ProjectReference Include="..\Ecommerce.Infraestructura\Ecommerce.Infraestructura.csproj" />
+    <ProjectReference Include="..\Ecommerce.Transversal.Logging2\Ecommerce.Transversal.Logging.csproj" />
+    <ProjectReference Include="..\Ecommerce.Transversal.Mapper\Ecommerce.Transversal.Mapper.csproj" />
+    <ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -32,9 +32,9 @@
     <ProjectReference Include="..\Ecommerce.Domain.Core\Ecommerce.Domain.Core.csproj" />
     <ProjectReference Include="..\Ecommerce.Dominio\Ecommerce.Dominio.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura\Ecommerce.Infraestructura.csproj" />
-    <ProjectReference Include="..\Ecommerce.Transversal.Logging2\Ecommerce.Transversal.Logging.csproj" />
     <ProjectReference Include="..\Ecommerce.Transversal.Mapper\Ecommerce.Transversal.Mapper.csproj" />
     <ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
+	<ProjectReference Include="..\Ecommerce.Transversal.Logging\Ecommerce.Transversal.Logging.csproj" />
   </ItemGroup>
 
 </Project>

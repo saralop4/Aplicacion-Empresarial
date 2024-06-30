@@ -139,6 +139,7 @@ namespace Ecommerce.Services.WebApi
                   //por ejemplo camelcase.  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
               });
 
+            //en esta parte ya se configura como tal la comunicacion o mapeo entre el archivo json appsettings y la clase AppSettings
             var appSetingsSection = Configuration.GetSection("Config");
 
             builder.Services.Configure<AppSettings>(appSetingsSection);

@@ -62,11 +62,13 @@ namespace Ecommerce.Services.WebApi.Controllers.v1
             {
                 Subject = new ClaimsIdentity(new Claim[] //el atributo Subject nos permite especificar la informacion que contendrá el token
                 {
-                    new Claim(ClaimTypes.Name, usersDto.Data.UserId.ToString()) //hay diferentes tipos de ClaimTypes
+                    new Claim(ClaimTypes.Name, usersDto.Data.UserId.ToString()) //hay diferentes tipos de ClaimTypes, los tipos de claims son los que van a estar encriptados en el token.
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(15), //atributo de cuando va a expirar el token, en este caso durara 1 minuto
+                Expires = DateTime.UtcNow.AddMinutes(15), //atributo de cuando va a expirar el token, en este caso durará 1 minuto
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature), //este atributo nos permite especificar las credenciales que se utilizaran para firmar el token
                 //en este caso será la clave privada que esta en el archivo appsettings.json o clase AppSettings
+                //con el SecurityAlgorithms. control + barra espaciadora podemos ver la lista de algoritmos de encriptacion
+
                 Issuer = _appSettings.Issuer,
                 Audience = _appSettings.Audience
             };

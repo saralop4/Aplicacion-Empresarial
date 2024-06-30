@@ -18,9 +18,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Reflection;
 using System.Text;
 
 
@@ -42,16 +40,14 @@ namespace Ecommerce.Services.WebApi
 
             builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
+
+            //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EK SWAGGER CON AUTENTICACION JWT**************************/
             //builder.Services.AddSwaggerGen(c =>
             //{
-               
+
             //    var XmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             //    var xmlPath = Path.Combine(AppContext.BaseDirectory, XmlFile);
             //    c.IncludeXmlComments(xmlPath);
-
-
-
-            //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EK SWAGGER CON AUTENTICACION JWT**************************/
 
             //    //    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             //    //    {
@@ -81,7 +77,7 @@ namespace Ecommerce.Services.WebApi
 
             //    //});
 
-            //    /******************FINAL - ESTA ES UNA FORMA LARGA DE CONFIGURAR EK SWAGGER CON AUTENTICACION JWT*******************/
+            //    /******************FINAL - ESTA ES UNA FORMA LARGA DE CONFIGURAR EL SWAGGER CON AUTENTICACION JWT*******************/
 
 
 
@@ -123,8 +119,17 @@ namespace Ecommerce.Services.WebApi
 
 
             builder.Services.AddCors(options => options.AddPolicy(MyPolicy, builder => builder.WithOrigins(Configuration["Config:OriginsCors"]) //originis  permitidos con la key OriginsCors
-                                                                                              .AllowAnyHeader() //que permita todos los header
-                                                                                              .AllowAnyMethod()));//que permita todos los metodos
+
+                                                                                              .AllowAnyHeader() //Permite que el cliente envíe cualquier encabezado en la solicitud.
+                                                                                                                //Esto es útil cuando no quieres restringir los encabezados que el
+                                                                                                                //cliente puede enviar al servidor.
+                                                                                              .AllowAnyMethod()  //que permita todos los metodos
+                                                                                              .WithExposedHeaders("Content-Disposition"))); //Especifica qué encabezados pueden
+                                                                                                                                            //ser leídos por el cliente en la respuesta.
+                                                                                                                                            //En tu caso, estás exponiendo específicamente
+                                                                                                                                            //el encabezado Content-Disposition.
+                                                                                           // .WithHeaders() Si deseas restringir los encabezados que el cliente puede enviar, puedes usar.WithHeaders() en lugar de.AllowAnyHeader()
+
 
             builder.Services.AddControllers()
               .AddNewtonsoftJson(options =>
@@ -205,8 +210,9 @@ namespace Ecommerce.Services.WebApi
 
            if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI(
+                
+                app.UseSwagger(); //habilitamos el middleware para servir al swagger generated como un endpoint json
+                app.UseSwaggerUI( // habilitamos el dashboard de swagger 
                     c =>
                     {
                         //SwaggerEndpoint ese metodo recibe dos parametros, el primero es la url, el segundo es el nombre del endpoint

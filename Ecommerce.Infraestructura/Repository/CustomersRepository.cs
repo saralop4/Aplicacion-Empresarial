@@ -146,12 +146,8 @@ namespace Ecommerce.Infraestructura.Repository
             {
 
                 var query = "CustomersList"; //nombre del procedimiento almacenado
-                var parameters = new DynamicParameters(); //para el uso de dapper se recomienda el uso de parametros dinamicos
-                                                          //parameters es una lista de parametros
-                parameters.Add("CustomerID");
 
-
-                var customers = await connection.QueryAsync<Customers>(query, param: parameters, commandType: CommandType.StoredProcedure);
+                var customers = await connection.QueryAsync<Customers>(query, param: null, commandType: CommandType.StoredProcedure);
                 //el metodo execute permite invocar un procedimiento almacenado y enviarle los parametros
                 return customers;
             }

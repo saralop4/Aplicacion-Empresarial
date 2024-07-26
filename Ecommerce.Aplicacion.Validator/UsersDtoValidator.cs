@@ -1,6 +1,5 @@
 ﻿using Ecommerce.Aplicacion.DTO;
 using FluentValidation;
-using System;
 
 namespace Ecommerce.Aplicacion.Validator
 {

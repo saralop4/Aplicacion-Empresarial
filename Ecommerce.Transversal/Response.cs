@@ -21,6 +21,6 @@ namespace Ecommerce.Common
         //almacenará los detalle del try catch
         public string Message {  get; set; }    
 
-        public IEnumerable<ValidationFailure> Errors { get; set; }  
+        public IEnumerable<ValidationFailure> Errors { get; set; }  //ValidationFailure es un objeto propio de fluent validation
     }
 }

@@ -41,7 +41,11 @@ namespace Ecommerce.Services.WebApi
             builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
 
-            //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EK SWAGGER CON AUTENTICACION JWT**************************/
+
+
+
+
+            //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EL SWAGGER CON AUTENTICACION JWT**************************/
             //builder.Services.AddSwaggerGen(c =>
             //{
 
@@ -146,6 +150,7 @@ namespace Ecommerce.Services.WebApi
 
             // Configura la autenticación JWT
             var appSettings = appSetingsSection.Get<AppSettings>();// creamos una instancia de la clase AppSettings para tener acceso a las propiedades de esa clase
+
             var key = Encoding.UTF8.GetBytes(appSettings.Secret);
             var Issuer = appSettings.Issuer;
             var Audience = appSettings.Audience;
@@ -154,7 +159,7 @@ namespace Ecommerce.Services.WebApi
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; //con estos atributos decimos que el token va a ser 
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;  //del tipo JwrBearer
-                        })
+            })
 
             .AddJwtBearer(options =>
             {
@@ -192,6 +197,7 @@ namespace Ecommerce.Services.WebApi
             });
 
 
+
             builder.Services.AddSingleton<IConfiguration>(Configuration);
             builder.Services.AddSingleton<IConnectionFactory, ConnectionFactory>(); //se necesita que una sola vez se conecte a la baase de datos y
             //y esa misma instancia de conexion se reutilice
@@ -203,10 +209,16 @@ namespace Ecommerce.Services.WebApi
             builder.Services.AddScoped<IUsersRepository, UsersRepository>();
             builder.Services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
             builder.Services.AddTransient<UsersDtoValidator>();
+
+
             builder.Services.AddVersioning(); //metodo de la clase VersioningExtension
+            // builder.Services.AddAuthentication(this.configuration);
+            // builder.Services.AddMapper();
+            // builder.Services.AddFeature(this.configuration);
 
 
-             builder.Services.AddSwaggerDocumentation();
+
+            builder.Services.AddSwaggerDocumentation();
             var app = builder.Build();
 
            if (app.Environment.IsDevelopment())

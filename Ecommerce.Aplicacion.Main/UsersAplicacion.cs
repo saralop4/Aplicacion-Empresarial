@@ -25,7 +25,7 @@ namespace Ecommerce.Aplicacion.Main
         public Response<UsersDto> Authenticate(string username, string password)
         {
             var response = new Response<UsersDto>();   
-            var validation = _usersDtovalidator.Validate(new UsersDto() { UserName = username, Password = password }); 
+            var validation = _usersDtovalidator.Validate(new UsersDto() { UserName = username, Password = password }); //esta variable almacena la respuesta del validador fluent
 
             if(!validation.IsValid)
             {

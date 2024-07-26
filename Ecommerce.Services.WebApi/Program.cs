@@ -10,6 +10,7 @@ using Ecommerce.Infraestructura.Interfaces;
 using Ecommerce.Infraestructura.Repository;
 using Ecommerce.Services.WebApi.Helpers;
 using Ecommerce.Services.WebApi.Modules.Swagger;
+using Ecommerce.Services.WebApi.Modules.Validator;
 using Ecommerce.Services.WebApi.Modules.Versioning;
 using Ecommerce.Transversal.Interfaces;
 using Ecommerce.Transversal.Logging;
@@ -39,10 +40,6 @@ namespace Ecommerce.Services.WebApi
             builder.Services.AddEndpointsApiExplorer();
 
             builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
-
-
-
-
 
 
             //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EL SWAGGER CON AUTENTICACION JWT**************************/
@@ -215,6 +212,10 @@ namespace Ecommerce.Services.WebApi
             // builder.Services.AddAuthentication(this.configuration);
             // builder.Services.AddMapper();
             // builder.Services.AddFeature(this.configuration);
+            // builder.Services.AddFeature(this.configuration);
+            // builder.Services.AddFeature(this.configuration);
+            builder.Services.AddValidator();
+            
 
 
 

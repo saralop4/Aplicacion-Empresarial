@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DocumentationFile>C:\Users\Sisma\Documents\Aplicacion-Empresarial\Ecommerce.Services.WebApi\Ecommerce.Services.WebApi.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\Sarah\Documents\Aplicacion-Empresarial\Ecommerce.Services.WebApi\Ecommerce.Services.WebApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

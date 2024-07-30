@@ -1,4 +1,5 @@
 ﻿using Ecommerce.Aplicacion.Interface;
+using Ecommerce.Services.WebApi;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -21,9 +22,9 @@ namespace Ecommerce.Application.Test
                 .AddEnvironmentVariables();
                 _configuration = builder.Build();
 
-            var startup = new Startup(_configuration);
+   
             var services= new ServiceCollection();
-            startup.ConfigureServices(services);
+            Program.ConfigureServices(services, _configuration);
 
             _scopeFactory = services.BuildServiceProvider().GetService<IServiceScopeFactory>();     
 

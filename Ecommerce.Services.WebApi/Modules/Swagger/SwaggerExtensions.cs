@@ -6,11 +6,11 @@ using System.Reflection;
 
 namespace Ecommerce.Services.WebApi.Modules.Swagger
 {
-    public static class SwaggerServiceExtensions
+    public static class SwaggerExtensions
     {
         public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services)
         {
-            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>(); //inyectamos la clase ConfigureSwaggerOptions
 
             services.AddSwaggerGen(c =>
             {
@@ -21,10 +21,10 @@ namespace Ecommerce.Services.WebApi.Modules.Swagger
                 var securityScheme = new OpenApiSecurityScheme
                 {
                     Description = "Ingrese el token JWT **_only_**",
-                    In = ParameterLocation.Header,
+                    In = ParameterLocation.Header, 
                     Type = SecuritySchemeType.Http,
                     Name = "Authorization",
-                    Scheme = "bearer",
+                    Scheme = "bearer", //token de portador
                     BearerFormat = "JWT",
                     Reference = new OpenApiReference
                     {

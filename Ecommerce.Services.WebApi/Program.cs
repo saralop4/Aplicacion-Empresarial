@@ -1,4 +1,3 @@
-using AutoMapper;
 using Ecommerce.Aplicacion.Interface;
 using Ecommerce.Aplicacion.Main;
 using Ecommerce.Aplicacion.Validator;
@@ -9,17 +8,17 @@ using Ecommerce.Infraestructura.Data;
 using Ecommerce.Infraestructura.Interfaces;
 using Ecommerce.Infraestructura.Repository;
 using Ecommerce.Services.WebApi.Helpers;
+using Ecommerce.Services.WebApi.Modules.Authentication;
+using Ecommerce.Services.WebApi.Modules.Feature;
+using Ecommerce.Services.WebApi.Modules.Mapper;
 using Ecommerce.Services.WebApi.Modules.Swagger;
 using Ecommerce.Services.WebApi.Modules.Validator;
 using Ecommerce.Services.WebApi.Modules.Versioning;
 using Ecommerce.Transversal.Interfaces;
 using Ecommerce.Transversal.Logging;
-using Ecommerce.Transversal.Mapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Text;
 
 
@@ -28,8 +27,6 @@ namespace Ecommerce.Services.WebApi
 {
     public class Program
     {
-
-        public static string MyPolicy { get; } = "policyApiEcommerce";
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -38,8 +35,12 @@ namespace Ecommerce.Services.WebApi
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddVersioning(); //metodo de la clase VersioningExtension
+            builder.Services.AddAuthentication(builder.Configuration);
+            builder.Services.AddMapper();
+            builder.Services.AddFeature(builder.Configuration);
+            builder.Services.AddValidator();
 
-            builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
 
             //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EL SWAGGER CON AUTENTICACION JWT**************************/
@@ -108,29 +109,6 @@ namespace Ecommerce.Services.WebApi
             //    /******************FINAL - FORMA CORTA*******************/
             //});
 
-            //  builder.Services.AddAutoMapper(x => x.AddProfile(new MappingsProfile()));
-
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingsProfile());
-            });
-
-            IMapper mapper = mappingConfig.CreateMapper();
-            builder.Services.AddSingleton(mapper);
-
-
-            builder.Services.AddCors(options => options.AddPolicy(MyPolicy, builder => builder.WithOrigins(Configuration["Config:OriginsCors"]) //originis  permitidos con la key OriginsCors
-
-                                                                                              .AllowAnyHeader() //Permite que el cliente envíe cualquier encabezado en la solicitud.
-                                                                                                                //Esto es útil cuando no quieres restringir los encabezados que el
-                                                                                                                //cliente puede enviar al servidor.
-                                                                                              .AllowAnyMethod()  //que permita todos los metodos
-                                                                                              .WithExposedHeaders("Content-Disposition"))); //Especifica qué encabezados pueden
-                                                                                                                                            //ser leídos por el cliente en la respuesta.
-                                                                                                                                            //En tu caso, estás exponiendo específicamente
-                                                                                                                                            //el encabezado Content-Disposition.
-                                                                                           // .WithHeaders() Si deseas restringir los encabezados que el cliente puede enviar, puedes usar.WithHeaders() en lugar de.AllowAnyHeader()
-
 
             builder.Services.AddControllers()
               .AddNewtonsoftJson(options =>
@@ -152,48 +130,6 @@ namespace Ecommerce.Services.WebApi
             var Issuer = appSettings.Issuer;
             var Audience = appSettings.Audience;
 
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; //con estos atributos decimos que el token va a ser 
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;  //del tipo JwrBearer
-            })
-
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false, // Asegúrate de que esta configuración es la deseada
-                    ValidIssuer = Issuer,
-                    ValidAudience = Audience,
-                    ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero
-                };
-
-                options.Events = new JwtBearerEvents
-                {
-                    OnTokenValidated = context =>
-                    {
-                        var userId = int.Parse(context.Principal.Identity.Name); //el metodo ontokevalidated valida obteniendo la informacion desde los claims
-                        return Task.CompletedTask; //que hemos generado y de ahi mismo se puede obtener todos los valores para el token como se desee personalizar
-                    },
-                    OnAuthenticationFailed = context =>
-                    {
-                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                        {
-                            context.Response.Headers.Add("Token-Expired", "true");
-                        }
-                        return Task.CompletedTask;
-                    }
-                };
-
-                options.RequireHttpsMetadata = false;
-                options.SaveToken = false;
-            });
-
-
 
             builder.Services.AddSingleton<IConfiguration>(Configuration);
             builder.Services.AddSingleton<IConnectionFactory, ConnectionFactory>(); //se necesita que una sola vez se conecte a la baase de datos y
@@ -206,18 +142,6 @@ namespace Ecommerce.Services.WebApi
             builder.Services.AddScoped<IUsersRepository, UsersRepository>();
             builder.Services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
             builder.Services.AddTransient<UsersDtoValidator>();
-
-
-            builder.Services.AddVersioning(); //metodo de la clase VersioningExtension
-            // builder.Services.AddAuthentication(this.configuration);
-            // builder.Services.AddMapper();
-            // builder.Services.AddFeature(this.configuration);
-            // builder.Services.AddFeature(this.configuration);
-            // builder.Services.AddFeature(this.configuration);
-            builder.Services.AddValidator();
-            
-
-
 
             builder.Services.AddSwaggerDocumentation();
             var app = builder.Build();
@@ -244,9 +168,6 @@ namespace Ecommerce.Services.WebApi
 
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors(MyPolicy); //agregamos en el pipeline el uso de cors, recibe el nombre de la politica
-               
-           // app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.MapControllers();
             app.Run();
         }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Ecommerce.Aplicacion.Interface;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
@@ -33,7 +34,7 @@ namespace Ecommerce.Application.Test
         {
             using var scope = _scopeFactory.CreateScope();
 
-            var context = scope.ServiceProvider.GetService<IUsersApplication>();
+            var context = scope.ServiceProvider.GetService<IUsersAplicacion>();
 
             //Arrange: Donde se inicializa los objetos necesarios para la ejecucion del codigo
             var userName = string.Empty;
@@ -54,7 +55,7 @@ namespace Ecommerce.Application.Test
         {
             using var scope = _scopeFactory.CreateScope();
 
-            var context = scope.ServiceProvider.GetService<IUsersApplication>();
+            var context = scope.ServiceProvider.GetService<IUsersAplicacion>();
 
             //Arrange: Donde se inicializa los objetos necesarios para la ejecucion del codigo
             var userName = "admin";
@@ -75,7 +76,7 @@ namespace Ecommerce.Application.Test
         {
             using var scope = _scopeFactory.CreateScope();
 
-            var context = scope.ServiceProvider.GetService<IUsersApplication>();
+            var context = scope.ServiceProvider.GetService<IUsersAplicacion>();
 
             //Arrange: Donde se inicializa los objetos necesarios para la ejecucion del codigo
             var userName = "admin";

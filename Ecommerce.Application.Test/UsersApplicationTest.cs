@@ -61,7 +61,7 @@ namespace Ecommerce.Application.Test
             //Arrange: Donde se inicializa los objetos necesarios para la ejecucion del codigo
             var userName = "admin";
             var password = "12345";
-            var expected = "Autenticacion Exitosa!!!";
+            var expected = "Autenticacion Exitosa";
 
             //Act: Donde se ejecuta el metodo que se va a probar y se obtiene el resultado.
             var result = context.Authenticate(userName, password);

@@ -39,7 +39,7 @@ namespace Ecommerce.Aplicacion.Main
                 var user = _usersDomain.Authenticate(username, password);   
                 response.Data = _mapper.Map<UsersDto>(user); //se mapea la entidad de negocio hacia el dto
                 response.IsSuccess = true;
-                response.Message = "Authenticacion Exitosa";
+                response.Message = "Autenticacion Exitosa";
 
             }
             catch(InvalidOperationException)

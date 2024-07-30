@@ -10,6 +10,7 @@ using Ecommerce.Infraestructura.Repository;
 using Ecommerce.Services.WebApi.Helpers;
 using Ecommerce.Services.WebApi.Modules.Authentication;
 using Ecommerce.Services.WebApi.Modules.Feature;
+using Ecommerce.Services.WebApi.Modules.Injection;
 using Ecommerce.Services.WebApi.Modules.Mapper;
 using Ecommerce.Services.WebApi.Modules.Swagger;
 using Ecommerce.Services.WebApi.Modules.Validator;
@@ -30,16 +31,47 @@ namespace Ecommerce.Services.WebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var Configuration = builder.Configuration;
+           // var Configuration = builder.Configuration;
+            ConfigureServices(builder.Services, builder.Configuration);
+
+                var app = builder.Build();
+
+                if (app.Environment.IsDevelopment())
+                {
+
+                    app.UseSwagger(); //habilitamos el middleware para servir al swagger generated como un endpoint json
+                    app.UseSwaggerUI( // habilitamos el dashboard de swagger 
+                        c =>
+                        {
+                            //SwaggerEndpoint ese metodo recibe dos parametros, el primero es la url, el segundo es el nombre del endpoint
+                            //  c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi Api Empresarial v1");
+
+                            var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+                            foreach (var description in provider.ApiVersionDescriptions)
+                            {
+                                c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                            }
+                        });
+                }
+
+                app.UseAuthentication();
+                app.UseAuthorization();
+                app.MapControllers();
+                app.Run();
+            
+        }
+
+        public static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        {
 
             // Add services to the container.
-            builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddVersioning(); //metodo de la clase VersioningExtension
-            builder.Services.AddAuthentication(builder.Configuration);
-            builder.Services.AddMapper();
-            builder.Services.AddFeature(builder.Configuration);
-            builder.Services.AddValidator();
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddVersioning();
+            services.AddAuthentication(configuration);
+            services.AddMapper();
+            services.AddFeature(configuration);
+            services.AddValidator();
 
 
 
@@ -110,66 +142,32 @@ namespace Ecommerce.Services.WebApi
             //});
 
 
-            builder.Services.AddControllers()
-              .AddNewtonsoftJson(options =>
-              {
-                  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver(); //de esta forma indicamos que en el proceso
-                  //de serializar y deserializar objetos json va a tomar la resolucion predeterminada, pero se puede usar otro tipo de resolucion, segun la necesidad,
-                  //por ejemplo camelcase.  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-              });
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver(); //de esta forma indicamos que en el proceso
+                                                                                                                           //de serializar y deserializar objetos json va a tomar la resolucion predeterminada, pero se puede usar otro tipo de resolucion, segun la necesidad,
+                                                                                                                           //por ejemplo camelcase.  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+
+
+            });
+
 
             //en esta parte ya se configura como tal la comunicacion o mapeo entre el archivo json appsettings y la clase AppSettings
-            var appSetingsSection = Configuration.GetSection("Config");
-
-            builder.Services.Configure<AppSettings>(appSetingsSection);
+            var appSettingsSection = configuration.GetSection("Config");
+            services.Configure<AppSettings>(appSettingsSection);
 
             // Configura la autenticación JWT
-            var appSettings = appSetingsSection.Get<AppSettings>();// creamos una instancia de la clase AppSettings para tener acceso a las propiedades de esa clase
-
+            var appSettings = appSettingsSection.Get<AppSettings>();// creamos una instancia de la clase AppSettings para tener acceso a las propiedades de esa clase
             var key = Encoding.UTF8.GetBytes(appSettings.Secret);
-            var Issuer = appSettings.Issuer;
-            var Audience = appSettings.Audience;
+            var issuer = appSettings.Issuer;
+            var audience = appSettings.Audience;
 
 
-            builder.Services.AddSingleton<IConfiguration>(Configuration);
-            builder.Services.AddSingleton<IConnectionFactory, ConnectionFactory>(); //se necesita que una sola vez se conecte a la baase de datos y
-            //y esa misma instancia de conexion se reutilice
-            builder.Services.AddScoped<ICustomerAplicacion, CustomersAplicacion>();
-            builder.Services.AddScoped<ICustomersDomain, CustomersDomain>();
-            builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
-            builder.Services.AddScoped<IUsersAplicacion, UsersAplicacion>();
-            builder.Services.AddScoped<IUsersDomain, UsersDomain>();    
-            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
-            builder.Services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
-            builder.Services.AddTransient<UsersDtoValidator>();
+            // Inyección de dependencias
+            services.AddInjection(configuration);
 
-            builder.Services.AddSwaggerDocumentation();
-            var app = builder.Build();
-
-           if (app.Environment.IsDevelopment())
-            {
-                
-                app.UseSwagger(); //habilitamos el middleware para servir al swagger generated como un endpoint json
-                app.UseSwaggerUI( // habilitamos el dashboard de swagger 
-                    c =>
-                    {
-                        //SwaggerEndpoint ese metodo recibe dos parametros, el primero es la url, el segundo es el nombre del endpoint
-                        //  c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi Api Empresarial v1");
-
-                        var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-                        foreach (var description in provider.ApiVersionDescriptions)
-                        {
-                            c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
-                        }
-                    });
-            }
-
-
-
-            app.UseAuthentication();
-            app.UseAuthorization();
-            app.MapControllers();
-            app.Run();
+            services.AddSwaggerDocumentation();
         }
+
     }
 }

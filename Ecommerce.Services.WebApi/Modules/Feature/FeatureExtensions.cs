@@ -21,9 +21,12 @@ namespace Ecommerce.Services.WebApi.Modules.Feature
                                                                                               .WithExposedHeaders("Content-Disposition"))); //Especifica qué encabezados pueden
                                                                                                                                             //ser leídos por el cliente en la respuesta.
                                                                                                                                             //En tu caso, estás exponiendo específicamente
-                     return services;                                                                                                       //el encabezado Content-Disposition.
+                                                                                                                                            //el encabezado Content-Disposition.
                                                                                                                                             // .WithHeaders() Si deseas restringir los encabezados que el cliente puede enviar, puedes usar.WithHeaders() en lugar de.AllowAnyHeader()
 
+
+            services.AddMvc();
+            return services;
 
         }
     }

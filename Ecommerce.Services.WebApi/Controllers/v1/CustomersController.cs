@@ -1,7 +1,6 @@
 ﻿using Ecommerce.Aplicacion.DTO;
 using Ecommerce.Aplicacion.Interface;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.Services.WebApi.Controllers.v1

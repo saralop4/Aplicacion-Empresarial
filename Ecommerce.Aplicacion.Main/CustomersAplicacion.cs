@@ -23,6 +23,7 @@ namespace Ecommerce.Aplicacion.Main
             _logger = logger;   
         }
 
+        #region Metodo Sincronos
         public Response<bool> Delete(string customerId)
         {
             var response = new Response<bool>();
@@ -44,27 +45,6 @@ namespace Ecommerce.Aplicacion.Main
             return response;
         }
 
-        public async Task<Response<bool>> DeleteAsync(string customerId)
-        {
-            var response = new Response<bool>();
-
-            try
-            {
-                response.Data = await _customersDomain.DeleteAsync(customerId);
-                if (response.Data)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Elimiacion Exitosa!!";
-                }
-            }
-            catch (Exception ex)
-            {
-                response.Message = ex.Message;
-
-            }
-            return response;
-        }
-
         public Response<CustomersDto> Get(string customerId)
         {
             var response = new Response<CustomersDto>();
@@ -72,7 +52,7 @@ namespace Ecommerce.Aplicacion.Main
             try
             {
                 var customers = _customersDomain.Get(customerId);
-                response.Data = _mapper.Map<CustomersDto>(customers);   
+                response.Data = _mapper.Map<CustomersDto>(customers);
                 if (response.Data != null)
                 {
                     response.IsSuccess = true;
@@ -105,12 +85,107 @@ namespace Ecommerce.Aplicacion.Main
             catch (Exception ex)
             {
                 response.Message = ex.Message;
-                _logger.LogError(ex.Message);   
+                _logger.LogError(ex.Message);
+
+            }
+            return response;
+        }
+        public Response<bool> Insert(CustomersDto customerDto)
+        {
+            var response = new Response<bool>();
+
+            try
+            {
+                var customer = _mapper.Map<Customers>(customerDto);
+                response.Data = _customersDomain.Insert(customer);
+                if (response.Data)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "Registro Exitoso!!";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Message = ex.Message;
 
             }
             return response;
         }
 
+        public Response<bool> Update(CustomersDto customerDto)
+        {
+            var response = new Response<bool>();
+
+            try
+            {
+                var customer = _mapper.Map<Customers>(customerDto);
+                response.Data = _customersDomain.Insert(customer);
+                if (response.Data)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "Actualizacion Exitosa!!";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Message = ex.Message;
+
+            }
+            return response;
+        }
+
+        public ResponsePagination<IEnumerable<CustomersDto>> GetAllWithPagination(int pageNumber, int pageSize)
+        {
+            var response = new ResponsePagination<IEnumerable<CustomersDto>>();
+
+            try
+            {
+                var count = _customersDomain.Count();
+                var customers = _customersDomain.GetAllWithPagination(pageNumber, pageSize);
+                response.Data = _mapper.Map<IEnumerable<CustomersDto>>(customers);
+
+                if(response.Data != null)
+                {
+                    response.PageNumber = pageNumber;
+                    response.TotalPages = (int)Math.Ceiling(count / (double)pageSize);
+                    response.TotalCount = count;
+                    response.IsSuccess = true;
+                    response.Message = "Consulta Paginada Exitosa!!!";
+
+                }
+            }
+            catch(Exception ex)
+            {
+                response.Message = ex.Message;
+            }
+
+            return response;
+        }
+
+        #endregion
+
+        #region Metodos Asyncronos
+
+        public async Task<Response<bool>> DeleteAsync(string customerId)
+        {
+            var response = new Response<bool>();
+
+            try
+            {
+                response.Data = await _customersDomain.DeleteAsync(customerId);
+                if (response.Data)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "Elimiacion Exitosa!!";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Message = ex.Message;
+
+            }
+            return response;
+        }
         public async Task<Response<IEnumerable<CustomersDto>>> GetAllAsync()
         {
             var response = new Response<IEnumerable<CustomersDto>>();
@@ -155,28 +230,7 @@ namespace Ecommerce.Aplicacion.Main
             return response;
         }
 
-        public Response<bool> Insert(CustomersDto customerDto)
-        {
-            var response = new Response<bool>();
-
-            try
-            {
-                var customer = _mapper.Map<Customers>(customerDto);
-                response.Data = _customersDomain.Insert(customer);
-                if (response.Data)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Registro Exitoso!!";
-                }
-            }
-            catch (Exception ex)
-            {
-                response.Message = ex.Message; 
-               
-            }
-            return response;    
-        }
-
+       
         public async Task<Response<bool>> InsertAsync(CustomersDto customerDto)
         {
             var response = new Response<bool>();
@@ -189,28 +243,6 @@ namespace Ecommerce.Aplicacion.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Registro Exitoso!!";
-                }
-            }
-            catch (Exception ex)
-            {
-                response.Message = ex.Message;
-
-            }
-            return response;
-        }
-
-        public Response<bool> Update(CustomersDto customerDto)
-        {
-            var response = new Response<bool>();
-
-            try
-            {
-                var customer = _mapper.Map<Customers>(customerDto);
-                response.Data = _customersDomain.Insert(customer);
-                if (response.Data)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Actualizacion Exitosa!!";
                 }
             }
             catch (Exception ex)
@@ -242,5 +274,34 @@ namespace Ecommerce.Aplicacion.Main
             }
             return response;
         }
+        public async Task<ResponsePagination<IEnumerable<CustomersDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            var response = new ResponsePagination<IEnumerable<CustomersDto>>();
+
+            try
+            {
+                var count = await _customersDomain.CountAsync();
+                var customers = await _customersDomain.GetAllWithPaginationAsync(pageNumber, pageSize);
+                response.Data = _mapper.Map<IEnumerable<CustomersDto>>(customers);
+
+                if (response.Data != null)
+                {
+                    response.PageNumber = pageNumber;
+                    response.TotalPages = (int)Math.Ceiling(count / (double)pageSize);
+                    response.TotalCount = count;
+                    response.IsSuccess = true;
+                    response.Message = "Consulta Paginada Exitosa!!!";
+
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Message = ex.Message;
+            }
+
+            return response;
+        }
+
+        #endregion 
     }
 }

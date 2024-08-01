@@ -111,6 +111,20 @@ namespace Ecommerce.Services.WebApi.Controllers.v2
             }
             return BadRequest(response.Message);
 
+        }
+
+        [HttpGet("GetAllWithPagination")]
+        public IActionResult GetAllWithPagination([FromQuery] int pageNumber, int pageSize)
+        {
+
+            var response = _customerAplicacion.GetAllWithPagination(pageNumber,pageSize);
+
+            if (response.IsSuccess)
+            {
+                return Ok(response);
+            }
+            return BadRequest(response.Message);
+
 
         }
 
@@ -203,6 +217,21 @@ namespace Ecommerce.Services.WebApi.Controllers.v2
         {
 
             var response = await _customerAplicacion.GetAllAsync();
+
+            if (response.IsSuccess)
+            {
+                return Ok(response);
+            }
+            return BadRequest(response.Message);
+
+
+        }
+
+        [HttpGet("GetAllWithPaginationAsync")]
+        public async Task<IActionResult> GetAllWithPaginationAsync([FromQuery] int pageNumber, int pageSize)
+        {
+
+            var response = await _customerAplicacion.GetAllWithPaginationAsync(pageNumber, pageSize);
 
             if (response.IsSuccess)
             {

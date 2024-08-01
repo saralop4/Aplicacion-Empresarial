@@ -7,9 +7,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.Dominio.Entity\Ecommerce.Dominio.Entity.csproj" />
+    <ProjectReference Include="..\Ecommerce.Dominio.Interfaces\Ecommerce.Dominio.Interfaces.csproj" />
+    <ProjectReference Include="..\Ecommerce.Infraestructura.Interfaces\Ecommerce.Infraestructura.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

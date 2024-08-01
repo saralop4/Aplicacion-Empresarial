@@ -2,7 +2,7 @@
 using Ecommerce.Dominio.Interfaces;
 using Ecommerce.Infraestructura.Interfaces;
 
-namespace Ecommerce.Domain.Core
+namespace Ecommerce.Dominio.Core
 {
     public class UsersDomain : IUsersDomain
     {

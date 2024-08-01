@@ -115,7 +115,31 @@ namespace Ecommerce.Infraestructura.Repository
                 return result > 0;
             }
         }
+        public IEnumerable<Customers> GetAllWithPagination(int pageNumber, int pageSize)
+        {
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
+            {
+                var query = "CustomersListWithPagination";
+                var parameters = new DynamicParameters();
 
+                parameters.Add("PageNumbe", pageNumber);
+                parameters.Add("PageSize", pageSize);
+
+                var result = connection.Query<Customers>(query, param: parameters, commandType: CommandType.StoredProcedure);
+
+                return result;
+            }
+        }
+
+        public int Count()
+        {
+          using var connection = _context.CreateConnection();
+             var query = "select Count(*) from Customers";
+            var parameters = new DynamicParameters();   
+
+            var result = connection.ExecuteScalar<int>(query,commandType: CommandType.Text);// con el metodo ExecuteScalar ejecutamos la instruccion para saber cuantos registros tiene la tabla
+            return result;
+        }
 
         #endregion Fin Síncronos
 
@@ -218,6 +242,32 @@ namespace Ecommerce.Infraestructura.Repository
                 //el metodo execute permite invocar un procedimiento almacenado y enviarle los parametros
                 return result > 0;
             }
+        }
+
+        public async Task<IEnumerable<Customers>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
+            {
+                var query = "CustomersListWithPagination";
+                var parameters = new DynamicParameters();
+
+                parameters.Add("PageNumber", pageNumber);
+                parameters.Add("PageSize", pageSize);
+
+                var result = await connection.QueryAsync<Customers>(query, param: parameters, commandType: CommandType.StoredProcedure);
+
+                return result;
+            }
+        }
+
+        public async Task<int> CountAsync()
+        {
+            using var connection = _context.CreateConnection();
+            var query = "select Count(*) from Customers";
+            var parameters = new DynamicParameters();
+
+            var result = await connection.ExecuteScalarAsync<int>(query, commandType: CommandType.Text);// con el metodo ExecuteScalar ejecutamos la instruccion para saber cuantos registros tiene la tabla
+            return result;
         }
 
         #endregion Fin Asíncronos

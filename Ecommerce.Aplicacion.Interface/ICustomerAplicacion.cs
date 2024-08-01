@@ -1,8 +1,6 @@
 ﻿using Ecommerce.Aplicacion.DTO;
-using Ecommerce.Common;
-using System;
+using Ecommerce.Transversal.Common;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Ecommerce.Aplicacion.Interface

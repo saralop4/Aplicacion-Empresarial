@@ -251,8 +251,8 @@ namespace Ecommerce.Infraestructura.Repository
                 var query = "CustomersListWithPagination";
                 var parameters = new DynamicParameters();
 
-                parameters.Add("PageNumber", pageNumber);
-                parameters.Add("PageSize", pageSize);
+                parameters.Add("PageNumber", pageNumber);//el numero de la pagina a mostrar
+                parameters.Add("PageSize", pageSize); //la cantidad de registros que se van a mostrar
 
                 var result = await connection.QueryAsync<Customers>(query, param: parameters, commandType: CommandType.StoredProcedure);
 
@@ -263,7 +263,7 @@ namespace Ecommerce.Infraestructura.Repository
         public async Task<int> CountAsync()
         {
             using var connection = _context.CreateConnection();
-            var query = "select Count(*) from Customers";
+            var query = "select Count(*) from Customers"; //devuelve el valor total de registros que hay en la tabla
             var parameters = new DynamicParameters();
 
             var result = await connection.ExecuteScalarAsync<int>(query, commandType: CommandType.Text);// con el metodo ExecuteScalar ejecutamos la instruccion para saber cuantos registros tiene la tabla

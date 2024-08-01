@@ -3,13 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <UserSecretsId>9062ea92-25ba-4215-bfc6-884a1c9133b3</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Ecommerce.Dominio.Entity\Ecommerce.Dominio.Entity.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura.Data\Ecommerce.Infraestructura.Data.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura.Interfaces\Ecommerce.Infraestructura.Interfaces.csproj" />
-    <ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
   </ItemGroup>
 
 </Project>

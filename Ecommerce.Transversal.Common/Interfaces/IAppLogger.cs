@@ -1,4 +1,4 @@
-﻿namespace Ecommerce.Common.Interfaces
+﻿namespace Ecommerce.Transversal.Common.Interfaces
 {
     public interface IAppLogger<T> 
     {

@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ecommerce.Dominio\Ecommerce.Dominio.csproj" />
-    <ProjectReference Include="..\Ecommerce.Infraestructura\Ecommerce.Infraestructura.csproj" />
+    <ProjectReference Include="..\Ecommerce.Infraestructura\Ecommerce.Infraestructura.Repository.csproj" />
   </ItemGroup>
 
 </Project>

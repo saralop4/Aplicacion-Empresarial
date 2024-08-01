@@ -1,12 +1,3 @@
-using Ecommerce.Aplicacion.Interface;
-using Ecommerce.Aplicacion.Main;
-using Ecommerce.Aplicacion.Validator;
-using Ecommerce.Common.Interfaces;
-using Ecommerce.Domain.Core;
-using Ecommerce.Dominio.Interfaces;
-using Ecommerce.Infraestructura.Data;
-using Ecommerce.Infraestructura.Interfaces;
-using Ecommerce.Infraestructura.Repository;
 using Ecommerce.Services.WebApi.Helpers;
 using Ecommerce.Services.WebApi.Modules.Authentication;
 using Ecommerce.Services.WebApi.Modules.Feature;
@@ -16,12 +7,8 @@ using Ecommerce.Services.WebApi.Modules.Mapper;
 using Ecommerce.Services.WebApi.Modules.Swagger;
 using Ecommerce.Services.WebApi.Modules.Validator;
 using Ecommerce.Services.WebApi.Modules.Versioning;
-using Ecommerce.Transversal.Interfaces;
-using Ecommerce.Transversal.Logging;
 using HealthChecks.UI.Client;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 

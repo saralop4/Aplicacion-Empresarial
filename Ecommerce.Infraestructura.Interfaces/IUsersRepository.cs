@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ecommerce.Infraestructura.Interfaces
 {
-    public interface IUsersRepository
+    public interface IUsersRepository : IGenericRepository<Users>
     {
 
         Users Authenticate(string userName, string password);

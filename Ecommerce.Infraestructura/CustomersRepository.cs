@@ -1,28 +1,26 @@
 ﻿using Dapper;
 using Ecommerce.Dominio.Entity;
+using Ecommerce.Infraestructura.Data;
 using Ecommerce.Infraestructura.Interfaces;
-using Ecommerce.Transversal.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Ecommerce.Infraestructura.Repository
 {
     public class CustomersRepository : ICustomersRepository
     {
-        private readonly IConnectionFactory _connectionFactory;
-        public CustomersRepository(IConnectionFactory connectionFactory)
+        private readonly DapperContext _context;
+        public CustomersRepository(DapperContext context)
         {
-            _connectionFactory = connectionFactory;
+            _context = context;
 
         }
 
         #region Metodos Sincronos
         public bool Delete(string customerId)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersDelete"; //nombre del procedimiento almacenado
@@ -39,7 +37,7 @@ namespace Ecommerce.Infraestructura.Repository
         }
         public Customers Get(string customerId)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersGetByID"; //nombre del procedimiento almacenado
@@ -56,7 +54,7 @@ namespace Ecommerce.Infraestructura.Repository
 
         public IEnumerable<Customers> GetAll()
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersList"; //nombre del procedimiento almacenado
@@ -67,7 +65,7 @@ namespace Ecommerce.Infraestructura.Repository
         }
         public bool Insert(Customers customer)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersInsert"; //nombre del procedimiento almacenado
@@ -94,7 +92,7 @@ namespace Ecommerce.Infraestructura.Repository
 
         public bool Update(Customers customer)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersUpdate"; //nombre del procedimiento almacenado
@@ -125,7 +123,7 @@ namespace Ecommerce.Infraestructura.Repository
         #region Metodos Asíncronos
         public async Task<bool> DeleteAsync(string customerId)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersDelete"; //nombre del procedimiento almacenado
@@ -142,7 +140,7 @@ namespace Ecommerce.Infraestructura.Repository
 
         public async Task<IEnumerable<Customers>> GetAllAsync()
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersList"; //nombre del procedimiento almacenado
@@ -155,7 +153,7 @@ namespace Ecommerce.Infraestructura.Repository
 
         public async Task<Customers> GetAsync(string customerId)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersGetByID"; //nombre del procedimiento almacenado
@@ -172,7 +170,7 @@ namespace Ecommerce.Infraestructura.Repository
 
         public async Task<bool> InsertAsync(Customers customer)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersInsert"; //nombre del procedimiento almacenado
@@ -198,7 +196,7 @@ namespace Ecommerce.Infraestructura.Repository
         }
         public async Task<bool> UpdateAsync(Customers customer)
         {
-            using (var connection = _connectionFactory.GetConnection) //el metodo Get devuelve la instancia de conexion abierta
+            using (var connection = _context.CreateConnection()) //el metodo Get devuelve la instancia de conexion abierta
             {
 
                 var query = "CustomersUpdate"; //nombre del procedimiento almacenado

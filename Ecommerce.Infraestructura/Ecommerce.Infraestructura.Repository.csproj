@@ -6,13 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.35" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Ecommerce.Dominio\Ecommerce.Dominio.csproj" />
+    <ProjectReference Include="..\Ecommerce.Infraestructura.Data\Ecommerce.Infraestructura.Data.csproj" />
+    <ProjectReference Include="..\Ecommerce.Infraestructura.Interfaces\Ecommerce.Infraestructura.Interfaces.csproj" />
     <ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
   </ItemGroup>
 

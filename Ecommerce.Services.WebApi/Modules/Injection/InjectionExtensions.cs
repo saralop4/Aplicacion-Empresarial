@@ -7,7 +7,6 @@ using Ecommerce.Dominio.Interfaces;
 using Ecommerce.Infraestructura.Data;
 using Ecommerce.Infraestructura.Interfaces;
 using Ecommerce.Infraestructura.Repository;
-using Ecommerce.Transversal.Interfaces;
 using Ecommerce.Transversal.Logging;
 
 namespace Ecommerce.Services.WebApi.Modules.Injection
@@ -18,7 +17,7 @@ namespace Ecommerce.Services.WebApi.Modules.Injection
         public static IServiceCollection AddInjection(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton(configuration);
-            services.AddSingleton<IConnectionFactory, ConnectionFactory>(); //se necesita que una sola vez se conecte a la baase de datos y
+            services.AddSingleton<DapperContext>(); //se necesita que una sola vez se conecte a la baase de datos y
             //y esa misma instancia de conexion se reutilice
             services.AddScoped<ICustomerAplicacion, CustomersAplicacion>();
             services.AddScoped<ICustomersDomain, CustomersDomain>();

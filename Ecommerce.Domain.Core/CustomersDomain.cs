@@ -1,12 +1,7 @@
 ﻿using Ecommerce.Dominio.Entity;
 using Ecommerce.Dominio.Interfaces;
 using Ecommerce.Infraestructura.Interfaces;
-using Ecommerce.Infraestructura.Repository;
-using Ecommerce.Transversal.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Ecommerce.Domain.Core

@@ -6,14 +6,15 @@ namespace Ecommerce.Domain.Core
 {
     public class UsersDomain : IUsersDomain
     {
-        private readonly IUsersRepository _usersRepository;
-        public UsersDomain(IUsersRepository usersRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public UsersDomain(IUnitOfWork unitOfWork)
         {
-            _usersRepository = usersRepository;
+            _unitOfWork = unitOfWork;
+
         }
         public Users Authenticate(string username, string password)
         {
-            return _usersRepository.Authenticate(username, password);
+            return _unitOfWork.UsersRepository.Authenticate(username, password);
         }
     }
 }

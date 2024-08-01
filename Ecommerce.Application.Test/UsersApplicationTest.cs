@@ -2,8 +2,6 @@
 using Ecommerce.Services.WebApi;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
 
 namespace Ecommerce.Application.Test
 {

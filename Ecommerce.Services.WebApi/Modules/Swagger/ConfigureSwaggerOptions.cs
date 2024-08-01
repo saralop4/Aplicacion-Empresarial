@@ -48,6 +48,11 @@ namespace Ecommerce.Services.WebApi.Modules.Swagger
                     Url = new Uri("https://example.com/license")
                 }
             };
+
+            if (description.IsDeprecated)
+            {
+                info.Description += "Esta version de la API ha quedado obsoleta"; // esta parte de simplementa para informar que version está deprecada
+            }
             return info;    
 
         }

@@ -8,7 +8,7 @@ namespace Ecommerce.Services.WebApi.Controllers.v1
     [Authorize]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    [ApiVersion("1.0")]
+    [ApiVersion("1.0", Deprecated = true)] //con el segundo parametro decimos que esta api se encuentra deprecadada, pero sigue igual funcionando normal
     public class CustomersController : Controller
     {
         private readonly ICustomerAplicacion _customerAplicacion;

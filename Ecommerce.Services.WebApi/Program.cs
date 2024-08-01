@@ -10,6 +10,7 @@ using Ecommerce.Infraestructura.Repository;
 using Ecommerce.Services.WebApi.Helpers;
 using Ecommerce.Services.WebApi.Modules.Authentication;
 using Ecommerce.Services.WebApi.Modules.Feature;
+using Ecommerce.Services.WebApi.Modules.HealthChecks;
 using Ecommerce.Services.WebApi.Modules.Injection;
 using Ecommerce.Services.WebApi.Modules.Mapper;
 using Ecommerce.Services.WebApi.Modules.Swagger;
@@ -17,6 +18,7 @@ using Ecommerce.Services.WebApi.Modules.Validator;
 using Ecommerce.Services.WebApi.Modules.Versioning;
 using Ecommerce.Transversal.Interfaces;
 using Ecommerce.Transversal.Logging;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.IdentityModel.Tokens;
@@ -54,9 +56,19 @@ namespace Ecommerce.Services.WebApi
                         });
                 }
 
-                app.UseAuthentication();
-                app.UseAuthorization();
-                app.MapControllers();
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.MapControllers();
+            app.MapHealthChecksUI();
+
+            //con este endpoint el cliente puede consumir en tiempo real el estado de salud del microservicio ya que se actualiza cada 5 segundo en tiempo real
+            app.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+
+                //como primer parametro colocamos el path del endpoint y como segundo parametro especificamos la estructura de respuesta
+            });
                 app.Run();
             
         }
@@ -72,6 +84,7 @@ namespace Ecommerce.Services.WebApi
             services.AddMapper();
             services.AddFeature(configuration);
             services.AddValidator();
+            services.AddHealthCheck(configuration);
 
 
 

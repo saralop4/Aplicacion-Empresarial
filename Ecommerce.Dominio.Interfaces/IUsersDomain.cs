@@ -1,7 +1,4 @@
 ﻿using Ecommerce.Dominio.Entity;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ecommerce.Dominio.Interfaces
 {

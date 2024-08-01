@@ -12,6 +12,9 @@ namespace Ecommerce.Infraestructura.Interfaces
         T Get(string id);
         IEnumerable<T> GetAll();
 
+        IEnumerable<T> GetAllWithPagination(int pageNumber, int pageSize);  
+        int Count();
+
         #endregion
 
         #region Metodos Asincronos
@@ -20,6 +23,8 @@ namespace Ecommerce.Infraestructura.Interfaces
         Task<bool> DeleteAsync(string id);
         Task<T> GetAsync(string id);
         Task<IEnumerable<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
+        Task<int> CountAsync();
 
         #endregion
 

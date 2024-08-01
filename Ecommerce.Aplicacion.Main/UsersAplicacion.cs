@@ -5,8 +5,6 @@ using Ecommerce.Aplicacion.Validator;
 using Ecommerce.Common;
 using Ecommerce.Dominio.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ecommerce.Aplicacion.Main
 {

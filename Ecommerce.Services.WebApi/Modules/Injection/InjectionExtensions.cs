@@ -2,7 +2,7 @@
 using Ecommerce.Aplicacion.Main;
 using Ecommerce.Aplicacion.Validator;
 using Ecommerce.Common.Interfaces;
-using Ecommerce.Domain.Core;
+using Ecommerce.Dominio.Core;
 using Ecommerce.Dominio.Interfaces;
 using Ecommerce.Infraestructura.Data;
 using Ecommerce.Infraestructura.Interfaces;

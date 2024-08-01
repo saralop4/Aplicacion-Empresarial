@@ -4,7 +4,7 @@ using Ecommerce.Infraestructura.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Ecommerce.Domain.Core
+namespace Ecommerce.Dominio.Core
 {
     public class CustomersDomain : ICustomersDomain
     {
@@ -14,6 +14,8 @@ namespace Ecommerce.Domain.Core
             _unitOfWork = unitOfWork;
 
         }
+
+        #region Metodos Sincronos
 
         //La clase CustomersDomain no necesita saber cómo se implementa el método Delete.Solo necesita saber que el método existe en la interfaz ICustomersRepository.
 
@@ -25,14 +27,6 @@ namespace Ecommerce.Domain.Core
         //Esto es posible gracias al  polimorfismo, un principio fundamental de la programación orientada a objetos.El polimorfismo permite que un objeto se comporte de diferentes 
         //maneras dependiendo de su tipo en tiempo de ejecución.En este caso, _customersRepository puede ser cualquier objeto que implemente ICustomersRepository, y el método Delete
         //que se llama es el que corresponde a la implementación real del objeto.
-        public bool Delete(string customerId)
-        {
-            return _unitOfWork.CustomersRepository.Delete(customerId);
-        }
-        public async Task<bool> DeleteAsync(string customerId)
-        {
-            return await _unitOfWork.CustomersRepository.DeleteAsync(customerId);
-        }
 
         public Customers Get(string customerId)
         {
@@ -44,6 +38,33 @@ namespace Ecommerce.Domain.Core
             return _unitOfWork.CustomersRepository.GetAll();
         }
 
+        public bool Delete(string customerId)
+        {
+            return _unitOfWork.CustomersRepository.Delete(customerId);
+        }
+        public bool Update(Customers customer)
+        {
+            return _unitOfWork.CustomersRepository.Update(customer);
+        }
+        public bool Insert(Customers customer)
+        {
+            return _unitOfWork.CustomersRepository.Insert(customer);
+        }
+        public int Count()
+        {
+            return _unitOfWork.CustomersRepository.Count();
+        }
+        public IEnumerable<Customers> GetAllWithPagination(int pageNumber, int pageSize)
+        {
+            return _unitOfWork.CustomersRepository.GetAllWithPagination(pageNumber, pageSize);
+        }
+
+        #endregion
+
+
+
+
+        #region Metodos Asyncronos
         public Task<IEnumerable<Customers>> GetAllAsync()
         {
             return _unitOfWork.CustomersRepository.GetAllAsync();
@@ -54,24 +75,32 @@ namespace Ecommerce.Domain.Core
             return await _unitOfWork.CustomersRepository.GetAsync(customerId);
         }
 
-        public bool Insert(Customers customer)
-        {
-           return _unitOfWork.CustomersRepository.Insert(customer);    
-        }
-
         public async Task<bool> InsertAsync(Customers customer)
         {
             return  await _unitOfWork.CustomersRepository.InsertAsync(customer);
         }
 
-        public bool Update(Customers customer)
+        public async Task<bool> DeleteAsync(string customerId)
         {
-            return _unitOfWork.CustomersRepository.Update(customer);
+            return await _unitOfWork.CustomersRepository.DeleteAsync(customerId);
         }
 
         public async Task<bool> UpdateAsync(Customers customer)
         {
             return await _unitOfWork.CustomersRepository.UpdateAsync(customer);
         }
+
+        public async Task<int> CountAsync()
+        {
+            return await _unitOfWork.CustomersRepository.CountAsync();  
+           
+        }
+        public async Task<IEnumerable<Customers>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _unitOfWork.CustomersRepository.GetAllWithPaginationAsync(pageNumber, pageSize);
+        }
+
+        
+        #endregion
     }
 }

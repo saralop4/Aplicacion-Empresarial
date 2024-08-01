@@ -1,7 +1,5 @@
 ﻿using Ecommerce.Dominio.Entity;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Ecommerce.Dominio.Interfaces
@@ -14,6 +12,9 @@ namespace Ecommerce.Dominio.Interfaces
         bool Delete(string customerId);
         Customers Get(string customerId);
         IEnumerable<Customers> GetAll();
+        IEnumerable<Customers> GetAllWithPagination(int pageNumber,int pageSize);
+        int Count();    
+
 
         #endregion
 
@@ -23,9 +24,11 @@ namespace Ecommerce.Dominio.Interfaces
         Task<bool> DeleteAsync(string customerId);
         Task<Customers> GetAsync(string customerId);
         Task<IEnumerable<Customers>> GetAllAsync();
+        Task<IEnumerable<Customers>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
+        Task<int> CountAsync();
 
         #endregion
 
-    
+
     }
 }

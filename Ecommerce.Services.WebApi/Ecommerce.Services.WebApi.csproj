@@ -14,14 +14,11 @@
     <PackageReference Include="AspNetCore.HealthChecks.UI" Version="6.0.5" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.5" />
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
@@ -33,11 +30,10 @@
     <ProjectReference Include="..\Ecommerce.Aplicacion.Interface\Ecommerce.Aplicacion.Interface.csproj" />
     <ProjectReference Include="..\Ecommerce.Aplicacion.Main\Ecommerce.Aplicacion.Main.csproj" />
     <ProjectReference Include="..\Ecommerce.Aplicacion.Validator\Ecommerce.Aplicacion.Validator.csproj" />
-    <ProjectReference Include="..\Ecommerce.Domain.Core\Ecommerce.Domain.Core.csproj" />
-    <ProjectReference Include="..\Ecommerce.Dominio\Ecommerce.Dominio.csproj" />
+    <ProjectReference Include="..\Ecommerce.Dominio.Core\Ecommerce.Dominio.Core.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura.Data\Ecommerce.Infraestructura.Data.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura.Interfaces\Ecommerce.Infraestructura.Interfaces.csproj" />
-    <ProjectReference Include="..\Ecommerce.Infraestructura\Ecommerce.Infraestructura.Repository.csproj" />
+    <ProjectReference Include="..\Ecommerce.Infraestructura.Repository\Ecommerce.Infraestructura.Repository.csproj" />
     <ProjectReference Include="..\Ecommerce.Transversal.Mapper\Ecommerce.Transversal.Mapper.csproj" />
     <ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
 	<ProjectReference Include="..\Ecommerce.Transversal.Logging\Ecommerce.Transversal.Logging.csproj" />

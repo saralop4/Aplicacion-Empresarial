@@ -1,8 +1,5 @@
 ﻿using Ecommerce.Aplicacion.DTO;
-using Ecommerce.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Ecommerce.Transversal.Common;
 
 namespace Ecommerce.Aplicacion.Interface
 {

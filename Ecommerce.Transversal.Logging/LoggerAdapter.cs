@@ -1,4 +1,4 @@
-﻿using Ecommerce.Common.Interfaces;
+﻿using Ecommerce.Transversal.Common.Interfaces;
 using Microsoft.Extensions.Logging;  //componente nugget
 
 namespace Ecommerce.Transversal.Logging

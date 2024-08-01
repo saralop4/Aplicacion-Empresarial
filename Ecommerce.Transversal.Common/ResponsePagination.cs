@@ -1,4 +1,4 @@
-﻿namespace Ecommerce.Common
+﻿namespace Ecommerce.Transversal.Common
 {
     public class ResponsePagination<T> : ResponseGeneric<T>
     {

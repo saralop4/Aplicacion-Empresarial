@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Ecommerce.Aplicacion.DTO;
 using Ecommerce.Aplicacion.Interface;
-using Ecommerce.Common;
-using Ecommerce.Common.Interfaces;
+using Ecommerce.Transversal.Common;
+using Ecommerce.Transversal.Common.Interfaces;
 using Ecommerce.Dominio.Entity;
 using Ecommerce.Dominio.Interfaces;
 using System;

@@ -10,7 +10,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
+	  <ProjectReference Include="..\Ecommerce.Transversal.Common\Ecommerce.Transversal.Common.csproj" />
 	</ItemGroup>
 
 </Project>

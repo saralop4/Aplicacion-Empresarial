@@ -2,7 +2,7 @@
 using Ecommerce.Aplicacion.DTO;
 using Ecommerce.Aplicacion.Interface;
 using Ecommerce.Aplicacion.Validator;
-using Ecommerce.Common;
+using Ecommerce.Transversal.Common;
 using Ecommerce.Dominio.Interfaces;
 using System;
 

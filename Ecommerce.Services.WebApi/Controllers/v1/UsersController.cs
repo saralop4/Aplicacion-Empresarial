@@ -1,6 +1,6 @@
 ﻿using Ecommerce.Aplicacion.DTO;
 using Ecommerce.Aplicacion.Interface;
-using Ecommerce.Common;
+using Ecommerce.Transversal.Common;
 using Ecommerce.Services.WebApi.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

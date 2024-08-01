@@ -35,7 +35,6 @@
     <ProjectReference Include="..\Ecommerce.Infraestructura.Interfaces\Ecommerce.Infraestructura.Interfaces.csproj" />
     <ProjectReference Include="..\Ecommerce.Infraestructura.Repository\Ecommerce.Infraestructura.Repository.csproj" />
     <ProjectReference Include="..\Ecommerce.Transversal.Mapper\Ecommerce.Transversal.Mapper.csproj" />
-    <ProjectReference Include="..\Ecommerce.Transversal\Ecommerce.Common.csproj" />
 	<ProjectReference Include="..\Ecommerce.Transversal.Logging\Ecommerce.Transversal.Logging.csproj" />
   </ItemGroup>
 

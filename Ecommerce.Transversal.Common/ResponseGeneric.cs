@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Results;
 using System.Collections.Generic;
 
-namespace Ecommerce.Common
+namespace Ecommerce.Transversal.Common
 {
 
     //esta clase va a contener toda la informacion que va a disponer los diversos recursos de la web api

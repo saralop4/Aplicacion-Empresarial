@@ -27,6 +27,7 @@ namespace Ecommerce.Services.WebApi.Modules.Injection
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
             services.AddTransient<UsersDtoValidator>();
+            services.AddScoped<IUnitOfWork,UnitOfWork>();   
 
             return services;    
         }

@@ -1,4 +1,3 @@
-using Ecommerce.Services.WebApi.Helpers;
 using Ecommerce.Services.WebApi.Modules.Authentication;
 using Ecommerce.Services.WebApi.Modules.Feature;
 using Ecommerce.Services.WebApi.Modules.HealthChecks;
@@ -9,7 +8,6 @@ using Ecommerce.Services.WebApi.Modules.Validator;
 using Ecommerce.Services.WebApi.Modules.Versioning;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using System.Text;
 
 
 
@@ -20,14 +18,31 @@ namespace Ecommerce.Services.WebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-           // var Configuration = builder.Configuration;
-            ConfigureServices(builder.Services, builder.Configuration);
 
-                var app = builder.Build();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver(); //de esta forma indicamos que en el proceso
+                                                                                                                           //de serializar y deserializar objetos json va a tomar la resolucion predeterminada, pero se puede usar otro tipo de resolucion, segun la necesidad,
+                                                                                                                           //por ejemplo camelcase.  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+            });
 
-                if (app.Environment.IsDevelopment())
-                {
+            builder.Services.AddVersioning();
+            builder.Services.AddAuthentication(builder.Configuration);
+            builder.Services.AddMapper();
+            builder.Services.AddFeature(builder.Configuration);
+            builder.Services.AddValidator();
+            builder.Services.AddHealthCheck(builder.Configuration);
+//            builder.Services.AddControllers();
+            builder.Services.AddInjection(builder.Configuration);
+            builder.Services.AddSwaggerDocumentation();
 
+            var app = builder.Build();
+
+            if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+            {
+
+                    app.UseDeveloperExceptionPage();
                     app.UseSwagger(); //habilitamos el middleware para servir al swagger generated como un endpoint json
                     app.UseSwaggerUI( // habilitamos el dashboard de swagger 
                         c =>
@@ -43,6 +58,7 @@ namespace Ecommerce.Services.WebApi
                         });
                 }
 
+            app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
@@ -51,123 +67,13 @@ namespace Ecommerce.Services.WebApi
             //con este endpoint el cliente puede consumir en tiempo real el estado de salud del microservicio ya que se actualiza cada 5 segundo en tiempo real
             app.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
             {
+                //como primer parametro colocamos el path del endpoint y como segundo parametro especificamos la estructura de respuesta
                 Predicate = _ => true,
                 ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-
-                //como primer parametro colocamos el path del endpoint y como segundo parametro especificamos la estructura de respuesta
+               
             });
                 app.Run();
             
         }
-
-        public static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
-        {
-
-            // Add services to the container.
-            services.AddControllers();
-            services.AddEndpointsApiExplorer();
-            services.AddVersioning();
-            services.AddAuthentication(configuration);
-            services.AddMapper();
-            services.AddFeature(configuration);
-            services.AddValidator();
-            services.AddHealthCheck(configuration);
-
-
-
-            //    /*************************ESTA ES UNA FORMA LARGA DE CONFIGURAR EL SWAGGER CON AUTENTICACION JWT**************************/
-            //builder.Services.AddSwaggerGen(c =>
-            //{
-
-            //    var XmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-            //    var xmlPath = Path.Combine(AppContext.BaseDirectory, XmlFile);
-            //    c.IncludeXmlComments(xmlPath);
-
-            //    //    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-            //    //    {
-            //    //        Description = "Ingrese el token JWT así: Bearer {su token}",
-            //    //        In = ParameterLocation.Header,//ubicacion donde se va a enviar el token bearer es decir en el header
-            //    //       // Type = SecuritySchemeType.ApiKey,
-            //    //       Type= SecuritySchemeType.Http, //este esquema nos permite enviar un token de autorizacion en el header
-            //    //        Name = "Authorization",
-            //    //        Scheme = "bearer",
-            //    //        BearerFormat= "JWT"
-            //    //    });
-
-            //    //    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-            //    //        {
-            //    //            {
-            //    //                new OpenApiSecurityScheme
-            //    //                {
-            //    //                    Reference = new OpenApiReference
-            //    //                    {
-            //    //                        Type = ReferenceType.SecurityScheme,
-            //    //                        Id = JwtBearerDefaults.AuthenticationScheme
-            //    //                    }
-            //    //                },
-            //    //                new List<string>()
-            //    //            }
-            //    //    });
-
-            //    //});
-
-            //    /******************FINAL - ESTA ES UNA FORMA LARGA DE CONFIGURAR EL SWAGGER CON AUTENTICACION JWT*******************/
-
-
-
-            //    /******************FORMA CORTA*******************/
-            //    var securityScheme = new OpenApiSecurityScheme
-            //        {
-            //            Description = "Ingrese el token JWT **_only_**",
-            //            In = ParameterLocation.Header,//ubicacion donde se va a enviar el token bearer es decir en el header
-            //            Type = SecuritySchemeType.Http, //este esquema nos permite enviar un token de autorizacion en el header
-            //            Name = "Authorization",
-            //            Scheme = "bearer",
-            //            BearerFormat = "JWT",
-            //            Reference = new OpenApiReference
-            //            {
-            //                Type = ReferenceType.SecurityScheme,
-            //                Id = JwtBearerDefaults.AuthenticationScheme
-            //            }
-
-            //        };
-
-            //        c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
-
-            //        c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-            //        {
-            //            {securityScheme,  new List<string>() { } }
-            //        });
-            //    /******************FINAL - FORMA CORTA*******************/
-            //});
-
-
-            services.AddControllers().AddNewtonsoftJson(options =>
-            {
-                options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver(); //de esta forma indicamos que en el proceso
-                                                                                                                           //de serializar y deserializar objetos json va a tomar la resolucion predeterminada, pero se puede usar otro tipo de resolucion, segun la necesidad,
-                                                                                                                           //por ejemplo camelcase.  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-
-
-            });
-
-
-            //en esta parte ya se configura como tal la comunicacion o mapeo entre el archivo json appsettings y la clase AppSettings
-            var appSettingsSection = configuration.GetSection("Config");
-            services.Configure<AppSettings>(appSettingsSection);
-
-            // Configura la autenticación JWT
-            var appSettings = appSettingsSection.Get<AppSettings>();// creamos una instancia de la clase AppSettings para tener acceso a las propiedades de esa clase
-            var key = Encoding.UTF8.GetBytes(appSettings.Secret);
-            var issuer = appSettings.Issuer;
-            var audience = appSettings.Audience;
-
-
-            // Inyección de dependencias
-            services.AddInjection(configuration);
-
-            services.AddSwaggerDocumentation();
-        }
-
     }
 }
